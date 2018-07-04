@@ -298,7 +298,7 @@ class d_spline:
       return -120 + x * (240 - x * 120)
 
     def piece_3_0(self,x):
-      return 120 * x * x;
+      return 120 * x * x
 
     def piece_3_1(self,x):    
       return 120 + x * (240 - x * 360)
@@ -325,15 +325,14 @@ class d_spline:
       return 180 + x * (360 - x * 1260)
     
     def piece_6_3(self,x):
-      return 720  * x * x;
+      return 720  * x * x
       
     def eval(self,x):
       dt, bin = self.locate(x)
       if bin <= 2:
         if bin <= 0:
           a = self.piece_0_0(dt) * self.weights[0] + self.piece_1_0(dt) * self.weights[1]
-          return a + self.piece_2_0(dt) * self.weights[2] + self.piece_3_0(dt) * self.weights[3]
-#             
+          return a + self.piece_2_0(dt) * self.weights[2] + self.piece_3_0(dt) * self.weights[3]        
         if bin == 1:
           a = self.piece_1_1(dt) * self.weights[1] + self.piece_2_1(dt) * self.weights[2]
           return a + self.piece_3_1(dt) * self.weights[3] + self.piece_3_0(dt) * self.weights[4]
