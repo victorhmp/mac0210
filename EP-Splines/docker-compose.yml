@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+
+  ep:
+    container_name: mac0210
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/mac0210'
