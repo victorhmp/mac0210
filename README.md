@@ -1,4 +1,4 @@
-# MAC0210 - Numeric Methods Laboratory
+# MAC0210 - Numerical Methods Laboratory
 
 This repository contains a programming assignment for the discipline "MAC0210 - Laboratório de Métodos Numéricos".
 
